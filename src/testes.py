@@ -1,5 +1,5 @@
 import uteis.leitura as lt
-import uteis.lista_adjacencia as ladj
+import uteis.estados_lista as el
 
 #teste leitura
 print('#(1) Teste leitura')
@@ -19,12 +19,12 @@ alfabeto = info_automato.get_alfabeto()
 q_inicial = info_automato.get_q_inicial()
 q_finais = info_automato.get_q_finais()
 transicoes = info_automato.get_transicoes()
-lista_adjacencia = ladj.ListaAdjacencia(Q, alfabeto, q_inicial, q_finais, transicoes)
-for i in range(len(lista_adjacencia.celula)):
+lista_estados = el.ListaEstados(Q, alfabeto, q_inicial, q_finais, transicoes)
+for i in range(len(lista_estados.celula)):
     str_print = ''
-    str_print = lista_adjacencia.celula[i].label + ','
-    for j in range(len(lista_adjacencia.celula[i].vizinho)):
-        str_print += ' ' + lista_adjacencia.celula[lista_adjacencia.celula[i].vizinho[j].indice_celula].label
-        str_print += '-' + lista_adjacencia.celula[i].vizinho[j].simbolo_acesso
-    str_print += ', ' + lista_adjacencia.celula[i].tipo
+    str_print = lista_estados.celula[i].label + ','
+    for j in range(len(lista_estados.celula[i].vizinho)):
+        str_print += ' ' + lista_estados.celula[lista_estados.celula[i].vizinho[j].indice_celula].label
+        str_print += '-' + lista_estados.celula[i].vizinho[j].simbolo_acesso
+    str_print += ', ' + lista_estados.celula[i].tipo
     print(str_print)

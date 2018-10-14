@@ -1,19 +1,16 @@
-from . import afd as afd
-from . import afn as afn
-from . import afne as afne
-
-class AFD:
-     def __init__(self, grafo, funcao_transicao):
-        self.grafo = grafo
-        self.funcao_transicao = funcao_transicao
-        pass
+from .automato.automato_fd import AFD
+from .automato.automato_fn import AFN
+from .automato.automato_fne import AFNE
 
 class AutomatoFactory:
-    def novo_automato(grafo, funcao_transicao):
+    @staticmethod
+    def novo_automato(funcao_transicao, estados_lista):
         if funcao_transicao == 'afd':
-            return afd.AFD(grafo)
+            return AFD(estados_lista)
         elif funcao_transicao == 'afn':
-            return afn.AFN(grafo)
+            return AFN(estados_lista)
+        elif funcao_transicao == 'afne':
+            i = 4
         
 
 
