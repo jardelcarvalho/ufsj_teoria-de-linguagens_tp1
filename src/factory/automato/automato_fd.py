@@ -13,17 +13,24 @@ class AFD(a.Automato):
         # Usa função da superclasse __proximo() na execução.
         travou = None
         atual_i = self.estados_lista.i_q0
+        caminho = [atual_i]
         for i in range(len(palavra)):
             simbolo = palavra[i]
             candidatos, travou = self._proximo(atual_i, simbolo)
             if candidatos != []:
                 atual_i = candidatos.pop()
+                caminho.append(atual_i)
             if travou:
+                caminho = []
                 break
         if travou:
-            return False
+            return False, caminho
         else:
-            return self._verifica_final(atual_i)
+            aceita = self._verifica_final(atual_i)
+            if not aceita:
+                return aceita, []
+            else:
+                return aceita, caminho
 
     def processa_palavra(self, palavra):
         # Este método é abstrato na superclasse Automato,
@@ -31,7 +38,7 @@ class AFD(a.Automato):
         # deste afd.
         # Recebe uma palavra e a processa com o uso da função
         # programa. Retorna valor booleano indicando se a palavra
-        # foi aceita.
-        aceita = self.__funcao_transicao(palavra)
-        return aceita
+        # foi aceita e o caminho pelos estados do automato.
+        aceita, caminho = self.__funcao_transicao(palavra)
+        return aceita, caminho
         

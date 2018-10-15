@@ -10,7 +10,7 @@ class AutomatoFactory:
         elif funcao_transicao == 'afn':
             return AFN(estados_lista)
         elif funcao_transicao == 'afne':
-            i = 4
+            return AFNE(estados_lista)
         
 
 

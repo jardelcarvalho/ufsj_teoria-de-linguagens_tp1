@@ -23,7 +23,7 @@ class Automato(ABC):
             return True
         else:
             return False
-
+    
     def _proximo(self, atual_i, simbolo):
         # Recebe um símbolo e o índice do estado atual
         # e retorna o próximo estado juntamente com
@@ -38,6 +38,6 @@ class Automato(ABC):
                 candidatos.append(vizinho[i].indice_celula)
                 travou = False
             pass
-        print(candidatos)
-        input()
+        #print(candidatos)
+        #input()
         return candidatos, travou
