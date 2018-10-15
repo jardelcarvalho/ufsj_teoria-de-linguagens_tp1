@@ -8,7 +8,7 @@
   ### GNU Make 4.1
 
 
-## Para executar:
+# Para executar:
 
   (1) Através do terminal, acessar diretório onde se encontra o arquivo make.
   
