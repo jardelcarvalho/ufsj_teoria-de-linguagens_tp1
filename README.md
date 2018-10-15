@@ -1,20 +1,21 @@
 # tp1TL
-Dependências:
-  Python 3.6.5 (default)
+
+## Dependências:
+  ### Python 3.6.5 (default)
   
-  GCC 7.3.0
+  ### GCC 7.3.0
   
-  GNU Make 4.1
+  ### GNU Make 4.1
 
 
-Para executar:
+## Para executar:
 
   (1) Através do terminal, acessar diretório onde se encontra o arquivo make.
   
   (2) Digitar "make" sem as aspas
   
   
-Diretório "data/":
+# Diretório "data/":
 
   No diretório data encontram-se as especificações dos automatos utilizados pelo programa,
   sendo eles "afd.txt", "afn.txt" e "afne.txt".
