@@ -15,7 +15,7 @@
   (2) Digitar "make" sem as aspas
   
   
-# Diretório "data/":
+# Diretório "data/" (Local de especificação de automatos):
 
   No diretório data encontram-se as especificações dos automatos utilizados pelo programa,
   sendo eles "afd.txt", "afn.txt" e "afne.txt".
