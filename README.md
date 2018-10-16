@@ -10,7 +10,7 @@
 
 # Para executar:
 
-  ##(1)## Através do terminal, acessar diretório onde se encontra o arquivo make.
+  (1) Através do terminal, acessar diretório onde se encontra o arquivo make.
   
   (2) Digitar "make" sem as aspas
   
